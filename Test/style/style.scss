@@ -1,0 +1,127 @@
+@import "fonts.css";
+body{
+    display: grid;
+    place-content: center;
+}
+h1{
+    font-family: gunny;
+    font-size: 55px;
+    margin-top: 0em;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 0.5em;
+}
+h2{
+    font-family: MyriadPro;
+    font-size: 18px;
+    color: grey;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.card{
+    width: 100%;
+    height: auto;
+    display: grid;
+    &__img{
+        display: block;
+        justify-content: center;
+    }
+    &__content{
+        background-color: white;
+        border: 1px solid;
+        border-color: #ebebeb;
+        width: 402px;
+        height: 156px;
+        transform: translate(9.5%, -30%);
+        &--active{
+            padding: 0em;
+            transform: translate(40%, -100%);
+            width: 175.2px;
+            height: 24px;
+            border: none;
+            background-color: white; 
+            outline: none;
+        }
+        &--active:hover{
+            background-color: gainsboro;
+        }
+        &--text{
+            padding-top: 20px;
+            margin: 20px;
+            font-size: 16px;
+        }
+        &--title{
+            transform: translate(17%, -317%);
+            background-color:	#ff6666;
+            width: 301px;
+            height: 50px;
+            font-family: gunny;
+            color: white;
+            font-size: 40px;
+            font-weight: 400;
+            margin: 0px;
+        }
+        &--href{
+            color: red;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    }  
+}
+@media screen and (max-width: 400px){
+   h1{
+       font-size: 40px;
+   }
+}
+@media screen and (max-width: 643px){
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 67%;
+    }
+    .wrapper2{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+    }
+}
+
+@media screen and (min-width:643px) and (max-width:1000px){
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+    }
+    .wrapper2{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+    }
+    #card{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 0%;
+    }
+}
+@media screen and (min-width: 1000px){
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 15px;
+    }
+    .wrapper2{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+    }
+}
